@@ -33,13 +33,15 @@ ActiveRecord::Schema.define(version: 2020_03_25_220904) do
     t.string "advertiser_name", null: false
     t.string "url", limit: 500, null: false
     t.text "description", null: false
-    t.datetime "starts_end", null: false
+    t.datetime "starts_at", null: false
     t.datetime "ends_at"
     t.boolean "premium", default: false
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["advertiser_name"], name: "index_offers_on_advertiser_name"
     t.index ["description"], name: "index_offers_on_description"
+    t.index ["status"], name: "index_offers_on_status"
     t.index ["url"], name: "index_offers_on_url"
   end
 

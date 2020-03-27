@@ -7,9 +7,10 @@ class CreateOffers < ActiveRecord::Migration[6.0]
       t.string :advertiser_name, index: true, null: false
       t.string :url, index: true, null: false, limit: 500
       t.text :description, index: true, null: false
-      t.datetime :starts_end, null: false
+      t.datetime :starts_at, null: false
       t.datetime :ends_at
       t.boolean :premium, default: false
+      t.integer :status, default: 0, index: true
 
       t.timestamps
     end
