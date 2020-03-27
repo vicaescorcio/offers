@@ -8,7 +8,7 @@ class Offer < ApplicationRecord
   validates :starts_at, presence: true
   validate :ends_after_starts_at?, if: -> { ends_at && starts_at }
 
-  enum status: [ :enabled, :disabled ]
+  enum status: %i[disabled enabled]
 
   private
 
