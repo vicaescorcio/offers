@@ -1,0 +1,10 @@
+<% @offers.each do |offer|%>
+  <div class="card">
+    <img class="card-img-top" src="https://images-geeknative-com.exactdn.com/wp-content/uploads/2020/03/12102820/disneyplus.jpg?strip=all&lossy=1&ssl=1" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= offer.advertiser_name %></h5>
+      <p class="card-text"><%= offer.description %></p>
+      <p class="card-text"><small class="text-muted">Last updated <%= offer.updated_at %></small></p>
+    </div>
+  </div>
+<%end%>

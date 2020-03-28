@@ -5,3 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+companies = %w[Acme Globex Soylent Initech
+               Dundler Mifflin Alchmex Oscorp
+               Wayne Umbrella Starks Wonka]
+
+40.times do |index|
+  name = companies.sample(2)
+
+  if index.even?
+    ends = Time.zone.now + index.days
+    premium = true
+  else
+    ends = nil
+    premium = false
+  end
+
+  Offer.create(
+    advertiser_name: "#{name.join(' ')} Company",
+    url: "https://#{name.join('-')}.com",
+    description: 'We are the best company in whole world!',
+    starts_at: Time.zone.now,
+    ends_at: ends,
+    premium: premium
+  )
+end
+
+AdminUser.create(username: 'admin', password: 'password')

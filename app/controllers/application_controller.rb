@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  def home; end
+
   protected
 
   def authenticate_admin_user!

@@ -1,0 +1,95 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient( to right,#20E3A9,#08AEEA);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Kanit', sans-serif;
+}
+
+a, a:link, a:visited {
+  color:#0eaf82 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black !important;
+}
+
+.jumbotron {
+  background-image: url('~media/images/background-1.jpeg');
+  background-size: cover;
+  background-position: auto 200px;
+  background-repeat: no-repeat;
+  color: white !important;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10%;
+}
+
+.jumbotron .container  {
+  text-align: right;
+}
+
+.jumbotron #title {
+  margin-top: -40px;
+  color: #1fb287;
+  font-weight: 380;
+}
+
+.jumbotron #footer {
+  font-weight: 500;
+  color: #ff5e00;
+  font-size: 5rem;
+  margin-top: -20px;
+}
+
+.jumbotron h2 {
+  color: white;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 760px) {
+  .jumbotron .container  {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+
+.card {
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+
+.card:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.tabs {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+  z-index: 2;
+  border-bottom: 1px solid white
+}
+
+.tabs span {
+  margin: 20px;
+  color: white;
+}
+
+.text-muted {
+  color: rgb(195, 195, 195);
+}
