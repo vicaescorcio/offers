@@ -12,5 +12,10 @@ You need to build a small web application that displays offers to users. For exa
 
 - Link to Heroku deployed app: https://desolate-sands-25397.herokuapp.com/
 
+
+# Log in as Admin
+https://desolate-sands-25397.herokuapp.com/admin
+   ```username: admin```
+   ```password: password```
 # Run test suite
 ``` bundle exec rspec spec/```
