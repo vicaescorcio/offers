@@ -10,5 +10,7 @@
 * The test
 You need to build a small web application that displays offers to users. For example, Walmart, which is one of our advertisers has many active offers (10% discount on clothes, 20% discount on car parts, etc). Your application should be divided in two major components
 
+- Link to Heroku deployed app: https://desolate-sands-25397.herokuapp.com/
+
 # Run test suite
 ``` bundle exec rspec spec/```
