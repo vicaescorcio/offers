@@ -1,24 +1,14 @@
-# README
+# Tools
+- Ruby 2.6.3
+  - ActiveAdmin
+  - Kaminari
+- Rails 5.2
+- Webpacker
+- Postgres
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Resume
+* The test
+You need to build a small web application that displays offers to users. For example, Walmart, which is one of our advertisers has many active offers (10% discount on clothes, 20% discount on car parts, etc). Your application should be divided in two major components
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Run test suite
+``` bundle exec rspec spec/```
