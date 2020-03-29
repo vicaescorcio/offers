@@ -1,5 +1,7 @@
+
 <section id="offers">
   <div class="card-columns">
     <%= render partial: './offers/partials/offers' %>
   </div>
+  <%= paginate @offers %>
 </section>

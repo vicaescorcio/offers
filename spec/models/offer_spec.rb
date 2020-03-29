@@ -6,6 +6,7 @@ RSpec.describe Offer, type: :model do
   subject { build(:offer) }
 
   describe 'validations' do
+    it { should validate_presence_of(:company) }
     it { should validate_presence_of(:advertiser_name) }
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:url) }

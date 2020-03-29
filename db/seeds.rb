@@ -21,12 +21,14 @@ companies = %w[Acme Globex Soylent Initech
   end
 
   Offer.create(
-    advertiser_name: "#{name.join(' ')} Company",
+    company: "#{name.join(' ')} Company",
+    advertiser_name: "#{index * 2}%",
     url: "https://#{name.join('-')}.com",
     description: 'We are the best company in whole world!',
-    starts_at: Time.zone.now,
+    starts_at: Time.zone.now - 1.days,
     ends_at: ends,
-    premium: premium
+    premium: premium,
+    status: 'enabled'
   )
 end
 

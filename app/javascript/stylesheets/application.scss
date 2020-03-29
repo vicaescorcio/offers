@@ -15,13 +15,12 @@ body {
   font-family: 'Kanit', sans-serif;
 }
 
-a, a:link, a:visited {
-  color:#0eaf82 !important;
+.navbar a, a:link, a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  color: black !important;
+.nav-link {
+  color:#0eaf82 !important;
 }
 
 .jumbotron {
@@ -73,9 +72,43 @@ a:hover {
 .card:hover {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
   cursor: pointer;
 }
+
+.takeit {
+  color: black !important;
+  border-color: #feb300;
+  background-color: none;
+}
+
+.takeit:hover {
+  color: white !important;
+  background-color: #feb300;
+  border-color: #feb300;
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.card .badge {
+  animation: blink 1s;
+  background-color: #fead01;
+  animation-iteration-count: infinite;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.card h5 {
+  color: #ff5e00;
+}
+
+@keyframes blink {
+  from {background-color: #fead01;}
+  to {background-color: white;}
+}
+
 
 .tabs {
   text-align: center;
@@ -87,9 +120,20 @@ a:hover {
 
 .tabs span {
   margin: 20px;
+  margin-right: 40px;
   color: white;
+  font-size: 20px;
+  font-weight: 500;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
-.text-muted {
-  color: rgb(195, 195, 195);
+.tabs span:hover{
+  color: yellow;
+  font-size: 25px;
+}
+
+
+footer .text-muted {
+  color:#5E6469 !important;
 }

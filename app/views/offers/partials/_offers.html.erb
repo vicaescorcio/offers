@@ -1,10 +1,18 @@
 <% @offers.each do |offer|%>
-  <div class="card">
-    <img class="card-img-top" src="https://images-geeknative-com.exactdn.com/wp-content/uploads/2020/03/12102820/disneyplus.jpg?strip=all&lossy=1&ssl=1" alt="Card image cap">
+  <div class="card text-center">
+    <% if offer.premium%>
+      <span class="badge right">Premium</span>
+    <%end%>
+    <div class="card-header">
+      <img src="http://icons.iconarchive.com/icons/grafikartes/flat-retro-modern/256/rainbow-apple-logo-icon.png" width="auto" height="60" alt="">
+    </div>
     <div class="card-body">
       <h5 class="card-title"><%= offer.advertiser_name %></h5>
-      <p class="card-text"><%= offer.description %></p>
-      <p class="card-text"><small class="text-muted">Last updated <%= offer.updated_at %></small></p>
+      <p class="card-text"><%= offer.company %></p>
+      <a target="_blank" href="<%= offer.url %>" class="takeit btn">Take it!</a>
+    </div>
+    <div class="card-footer text-muted">
+      Expires at <%= offer.ends_at&.strftime('%a %b %e %T %Y') %>
     </div>
   </div>
 <%end%>

@@ -3,6 +3,7 @@
 # Offers controller
 class OffersController < ApplicationController
   before_action :set_offers, only: :index
+  protect_from_forgery except: :index
 
   def index
     respond_to do |format|
@@ -15,9 +16,11 @@ class OffersController < ApplicationController
 
   def set_offers
     if params[:premium]
-      @offers = Offer.where(premium: true)
+      offers = Offer.enabled.where(premium: true)
     else
-      @offers = Offer.all
+      offers = Offer.enabled
     end
+
+    @offers = offers.page(params[:page])
   end
 end

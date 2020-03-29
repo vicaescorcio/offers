@@ -12,7 +12,6 @@ gem 'puma', '~> 4.1'
 # ActiveAdmin for manager models
 gem 'activeadmin'
 
-gem 'bcrypt'
 # Framework html for a clean code
 gem 'haml'
 # Use SCSS for stylesheets
@@ -26,7 +25,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt'
+
+# Gem gor pagination
+gem 'kaminari'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
