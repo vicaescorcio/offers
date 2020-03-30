@@ -1,5 +1,5 @@
 <% @offers.each do |offer|%>
-  <div class="card text-center">
+  <div class="card text-center" onmouseover="countDown('<%=offer.ends_at&.strftime('%a %b %e %T %Y')%>', '<%= offer.id %>')">
     <% if offer.premium%>
       <span class="badge right">Premium</span>
     <%end%>
@@ -12,7 +12,9 @@
       <a target="_blank" href="<%= offer.url %>" class="takeit btn">Take it!</a>
     </div>
     <div class="card-footer text-muted">
-      Expires at <%= offer.ends_at&.strftime('%a %b %e %T %Y') %>
+      <span id="<%=offer.id%>">
+        Expires at <%= offer.ends_at&.strftime('%a %b %e %T %Y') %>
+      </span>
     </div>
   </div>
 <%end%>
